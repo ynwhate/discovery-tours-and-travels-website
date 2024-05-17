@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .h1{
+    text-align: center;
+    font-size: 80px;
+    /* font-family: ; */
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    span{
+      color: gray;
+      font-size: 40px;
+      position: relative;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 50px;
+    }
+  }
+
+  .filterDiv {
+    float: left;
+    /* background-color: red; */
+    color: black;
+    /* padding: 2rem; */
+    /* border: 1px solid red; */
+    margin: 36px;
+    display: none;
+  }
+  
+  .show {
+    display: block;
+    border: 1px solid rgb(188, 186, 186);
+    border-radius: 5px;
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+  }
+
+  .show:hover{
+    box-shadow: 10px 10px 30px gray;
+  }
+  
+  .container {
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+  
+  /* Style the buttons */
+
+  #myBtnContainer{
+    margin: 10px 20px 30px 10px;
+  }
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .content{
+    padding: 1rem;
+    
+    h4{
+      margin-bottom: 10px;
+    }
+
+    button{
+      border: 1px solid var(--green);
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      background-color: white;
+      border-radius: 5px;
+      color: var(--green);
+      transition: all 0.3s;
+      
+    }
+    button:hover{
+      background-color: var(--green);
+      color: white;
+    }
+  }
+  img{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* footer */
+
+  .site-footer
+{
+  margin-top: 100px;
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+
+  </style>
+  <body>
+  
+  
+  <section>
+    <div class="h1">
+      <a href="index.html"><img src="images/image.png" alt=""></a>
+      Packages <span>for you</span>
+    </div>
+  </section>
+  <span style="margin-left: 10px;">Filters for you:</span>
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('mid')">Middle East & Africa</button>
+    <button class="btn" onclick="filterSelection('asia')">Asia</button>
+    <button class="btn" onclick="filterSelection('europe')">Europe</button>
+    <button class="btn" onclick="filterSelection('india')">India</button>
+    <button class="btn" onclick="filterSelection('beach')">Beaches</button>
+    <button class="btn" onclick="filterSelection('adventure')">Adventure</button>
+    <button class="btn" onclick="filterSelection('popular')">Popular</button>
+    <button class="btn" onclick="filterSelection('hiking')">Hiking</button>
+  </div>
+  
+  <div class="container">
+    <div class="filterDiv mid popular">
+      <div class="child">
+      <img src="images/packages/pack01Morocco.jpg" alt="">
+      <div class="content">
+        <h4>Morocco Fiesta</h4>
+        <div>14 days - 13 nights</div>
+        <a href="error404.html"><button>VIEW MORE</button></a>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="filterDiv mid"><div class="child">
+      <img src="images/packages/pack02Jordan.jpg" alt="">
+      <div class="content">
+        <h4>Jordan</h4>
+        <div>6 days - 5 nights</div>
+         <a href="error404.html"><button>VIEW MORE</button></a>
+      </div>
+    </div>
+  </div>
+
+    <div class="filterDiv mid popular">
+      <div class="child">
+      <img src="images/packages/pack03Egypt.jpg" alt="">
+      <div class="content">
+        <h4>Ancient Egypt</h4>
+        <div>20 days - 19 nights</div>
+         <a href="error404.html"><button>VIEW MORE</button></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="filterDiv beach">
+      <div class="child">
+        <img src="images/packages/pack04CostaRica.jpg" alt="">
+        <div class="content">
+          <h4>Costa Rica</h4>
+          <div>11 days - 10 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>   
+    
+    
+    <div class="filterDiv popular">
+      <div class="child">
+        <img src="images/packages/pack05USA.jpg" alt="">
+        <div class="content">
+          <h4>Grand USA</h4>
+          <div>20 days - 19 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv europe hiking popular">
+      <div class="child">
+        <img src="images/packages/pack06Switzerland.jpg" alt="">
+        <div class="content">
+          <h4>Lost In Switzerland</h4>
+          <div>21 days - 20 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv popular">
+      <div class="child">
+        <img src="images/packages/pack07Sydney.jpg" alt="">
+        <div class="content">
+          <h4>Sweet ol' Sydney</h4>
+          <div>20 days - 19 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv asia popular">
+      <div class="child">
+        <img src="images/packages/pack08Osaka.jpg" alt="">
+        <div class="content">
+          <h4>Osaka</h4>
+          <div>12 days - 11 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv popular india">
+      <div class="child">
+        <img src="images/packages/pack09Jaipur.jpg" alt="">
+        <div class="content">
+          <h4>Pink Jaipur</h4>
+          <div>10 days - 9 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv asia">
+      <div class="child">
+        <img src="images/packages/pack10ChiangMai.jpg" alt="">
+        <div class="content">
+          <h4>Chiang Mai</h4>
+          <div>20 days - 19 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv beach popular">
+      <div class="child">
+        <img src="images/packages/pack11Cairns.jpg" alt="">
+        <div class="content">
+          <h4>Cairns</h4>
+          <div>8 days - 7 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv adventure europe">
+      <div class="child">
+        <img src="images/packages/pack12paraglidingTurkey.jpg" alt="">
+        <div class="content">
+          <h4>Turkey</h4>
+          <div>19 days - 18 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv adventure">
+      <div class="child">
+        <img src="images/packages/pack13cyclingCambodia.jpg" alt="">
+        <div class="content">
+          <h4>Cambodia</h4>
+          <div>13 days - 12 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv asia adventure popular">
+      <div class="child">
+        <img src="images/packages/pack14kayakingThailand.jpg" alt="">
+        <div class="content">
+          <h4>Thailand</h4>
+          <div>22 days - 21 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv india adventure popular">
+      <div class="child">
+        <img src="images/packages/pack15LehLadakBikeTrip.jpg" alt="">
+        <div class="content">
+          <h4>Leh Ladhak</h4>
+          <div>5 days - 4 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv india hiking">
+      <div class="child">
+        <img src="images/packages/pack16Kasol.jpg" alt="">
+        <div class="content">
+          <h4>Kasol Therapy</h4>
+          <div>10 days - 9 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv europe hiking">
+      <div class="child">
+        <img src="images/packages/pack17PulpitRockNorway.jpg" alt="">
+        <div class="content">
+          <h4>Rockin' Norway</h4>
+          <div>20 days - 19 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv europe hiking">
+      <div class="child">
+        <img src="images/packages/pack18HarderKulm.jpg" alt="">
+        <div class="content">
+          <h4>Interlaken</h4>
+          <div>12 days - 11 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv beach europe popular">
+      <div class="child">
+        <img src="images/packages/pack19VeniceBeach.jpg" alt="">
+        <div class="content">
+          <h4>Exploring Venice</h4>
+          <div>12 days - 11 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+    <div class="filterDiv india beach popular">
+      <div class="child">
+        <img src="images/packages/pack20GoaBeach.jpg" alt="">
+        <div class="content">
+          <h4>Goan Madness</h4>
+          <div>5 days - 4 nights</div>
+           <a href="error404.html"><button>VIEW MORE</button></a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Welcome to Discovery Tours, your passport to unparalleled adventures worldwide. We specialize in crafting transformative travel experiences that resonate with your soul. From serene beach retreats to thrilling wilderness expeditions, our curated journeys cater to your wanderlust. With meticulous planning and personalized service, we ensure seamless travel arrangements and unforgettable memories. Embark on a voyage of discovery with us, where each destination unveils its treasures and every moment sparks inspiration. Let Discovery Tours be your trusted guide as you explore new horizons and create lifelong memories</p>
+        </div><br>
+  
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="contact.html">Tickets</a></li>
+            <li><a href="contact.html">VISA</a></li>
+            <li><a href="contact.html">Passport</a></li>
+            <li><a href="contact.html">Hotel Booking</a></li>
+            <li><a href="packages.html">Tours</a></li>
+          </ul>
+        </div><br>
+  
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div><br>
+      </div>
+      
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by Discovery Tours
+          </p>
+        </div>
+  
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="error404.html"><i class="fab fa-facebook"></i></a></li>
+            <li><a class="twitter" href="error404.html"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="linkedin" href="error404.html"><i class="fab fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+  
+</html>
